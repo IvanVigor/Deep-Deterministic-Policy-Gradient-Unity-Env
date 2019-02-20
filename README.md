@@ -1,6 +1,6 @@
 # Deep Deterministic Policy Gradient for Reacher Unity Env
 
-This repository contains all the tools and code for running a Deep Deterministic Policy Gradient (DDPG)  network over a reacher Unity environment. 
+This repository contains all the tools and code for running a Deep Deterministic Policy Gradient (DDPG)  network over a [Reacher](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher) Unity environment. 
 
 ![Alt Text](https://user-images.githubusercontent.com/10624937/43851024-320ba930-9aff-11e8-8493-ee547c6af349.gif)
 
