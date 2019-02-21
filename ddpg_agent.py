@@ -13,12 +13,12 @@ BUFFER_SIZE = int(1e5)  # replay buffer size
 BATCH_SIZE = 1000       # minibatch size
 GAMMA = 0.99            # discount factor
 TAU = 1e-3              # for soft update of target parameters
-LR_ACTOR = 1e-3         # learning rate of the actor 
+LR_ACTOR = 1e-3        # learning rate of the actor 
 LR_CRITIC = 1e-3        # learning rate of the critic
 WEIGHT_DECAY = 0        # L2 weight decay
 ITERATION_LEARNING = 2  # number of times to iterate the training process
-FREQUENCY_LEARNING = 20 # After how many steps it is required a training process
-NOISE_OU = 0.20         # Noise mean
+FREQUENCY_LEARNING = 15 # After how many steps it is required a training process
+NOISE_OU = 0.25         # Noise mean
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
@@ -85,7 +85,6 @@ class Agent():
         where:
             actor_target(state) -> action
             critic_target(state, action) -> Q-value
-
         Params
         ======
             experiences (Tuple[torch.Tensor]): tuple of (s, a, r, s', done) tuples 
@@ -123,7 +122,6 @@ class Agent():
     def soft_update(self, local_model, target_model, tau):
         """Soft update model parameters.
         θ_target = τ*θ_local + (1 - τ)*θ_target
-
         Params
         ======
             local_model: PyTorch model (weights will be copied from)
