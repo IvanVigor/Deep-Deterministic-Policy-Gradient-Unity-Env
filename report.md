@@ -15,6 +15,19 @@ For this environment we used only single double-jointed arm. It has been studied
 
 ## HyperParameters
 
+ ```BUFFER_SIZE = int(1e5)  # replay buffer size```
+```BATCH_SIZE = 1000       # minibatch size```
+```GAMMA = 0.99            # discount factor```
+```TAU = 1e-3              # for soft update of target parameters```
+```LR_ACTOR = 1e-3         # learning rate of the actor ```
+```LR_CRITIC = 1e-3        # learning rate of the critic```
+```WEIGHT_DECAY = 0        # L2 weight decay```
+```ITERATION_LEARNING = 2  # number of times to iterate the training process```
+```FREQUENCY_LEARNING = 15 # after how many steps it is required a training process```
+```NOISE_OU = 0.25         # noise mean ```
+
+
 ## Results
+
 
 ## Future Work
