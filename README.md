@@ -4,10 +4,8 @@ This repository contains all the tools and code for running a Deep Deterministic
 
 ![Alt Text](https://user-images.githubusercontent.com/10624937/43851024-320ba930-9aff-11e8-8493-ee547c6af349.gif)
 
-## How to Start
 
-
-##  Dependencies
+##  How to Start
 
 To set up your python environment to run the code in this repository, follow the instructions below.
 
