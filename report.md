@@ -40,6 +40,7 @@ This is the list of hyperparameters that has been used for the model training pr
 
 ## Results
 
+![Results](https://raw.githubusercontent.com/IvanVigor/Deep-Deterministic-Policy-Gradient-Unity-Env/master/pictures/index.png)
 
 ## Future Work
 
