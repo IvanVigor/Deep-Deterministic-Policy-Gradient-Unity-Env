@@ -6,7 +6,7 @@ This is a small reporta associate to the Deep Determinist Policy Gradient (DDPG)
 
 ## Environment Introduction
 
-In this environment, a double-jointed arm can move to target locations. The double-jointed arm will receive a reward  a reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
+In this environment, a double-jointed arm can move to target locations. The double-jointed arm receive a reward of +0.1 for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
 
 The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
 
@@ -14,7 +14,7 @@ For this environment we used only single double-jointed arm. It has been studied
 
 ## Deep Determinist Policy Gradient (DDPG)
 
-The environment in which this model has been trained is based on one single double-joined arm. THe code can be adapted easily to 20 jointed-arms architecture. The DDPG is a model which iterativelly learns an optimal policy using the Q-Learning algorithm. Q-Learning is reached thanks to the usage of Bellman equation:
+The environment in which this model has been trained is based on one single double-joined arm. The code can be adapted easily to 20 jointed-arms architecture. The DDPG is a model which iterativelly learns an optimal policy using the Q-Learning algorithm. Q-Learning is reached thanks to the usage of Bellman equation:
 
 ![Bellman](https://spinningup.openai.com/en/latest/_images/math/339d9f6adec072789c579d36f9d1791e6246b075.svg)
 
@@ -46,6 +46,8 @@ The Critic Model:
 * ```Hidden: (256 + action_size, 128) - ReLU```
 * ```Output: (128, 1) - Linear```
 
+![FFNN](http://neuralnetworksanddeeplearning.com/images/tikz11.png)
+
 ## HyperParameters
 
 This is the list of hyperparameters that has been used for the model training procedure. These values are also the inside the ddpg_agent.py file code global variables. 
@@ -57,8 +59,8 @@ This is the list of hyperparameters that has been used for the model training pr
 * ```LR_ACTOR = 1e-3         # learning rate of the actor ```
 * ```LR_CRITIC = 1e-3        # learning rate of the critic```
 * ```WEIGHT_DECAY = 0        # L2 weight decay```
-* ```ITERATION_LEARNING = 2  # number of times to iterate the training process```
-* ```FREQUENCY_LEARNING = 15 # after how many steps it is required a training process```
+* ```ITERATION_LEARNING = 6  # number of times to iterate the training process```
+* ```FREQUENCY_LEARNING = 20 # after how many steps it is required a training process```
 * ```NOISE_OU = 0.25         # noise mean ```
 
 ## Results
