@@ -32,6 +32,11 @@ The DDPG classical implementation uses several methodologies / tricks for improv
 
 * **Ornstein–Uhlenbeck Noise:** This is an approach used for defining the exploration and exploitation trade-off. 
 
+The good performances of this project are achieved with a fine tuning over these three properties above. For this project I have also added a clipping method for the gradient in order to avoid excessive weights update. 
+
+```torch.nn.utils.clip_grad_norm(self.critic_local.parameters(), 1)```
+
+
 ## PyTorch Network
 
 The PyTorch architecture is based on a Feed-Forward Neural Network with two hidden layer for both actor and critic. The first hidden layer is 256 and the second is 128 hidden units. 
