@@ -4,6 +4,12 @@ This repository contains all the tools and code for running a Deep Deterministic
 
 ![Alt Text](https://user-images.githubusercontent.com/10624937/43851024-320ba930-9aff-11e8-8493-ee547c6af349.gif)
 
+In this environment, a double-jointed arm can move to target locations. The double-jointed arm receive a reward of +0.1 for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
+
+The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
+
+For this environment we used only single double-jointed arm. It has been studied that using multiple arms may reduce the training effort thanks to the [sharing of experience](https://ai.googleblog.com/2016/10/how-robots-can-acquire-new-skills-from.html). For this project the task can be considered as completed when the average of last 100 episodes is greater than 30.
+
 
 ##  How to Start
 
@@ -63,6 +69,13 @@ In addition to PyTorch, in this repository has been used also Numpy. Numpy is al
 - **`Pandas`**
 - **`Time`**
 - **`Matplotlib`**
+
+## Files inside repository
+
+- **`report.md`**: it is a report file
+- **`ddpg_agent.py`**: this file contains the Agent and Critic learning approach
+- **`model.py`**: topology of the two networks
+- **`Continous_control.ipynb`**: Notebook related to the environment
 
 ## References
 
