@@ -85,7 +85,3 @@ Reacher Challenge - https://github.com/Unity-Technologies/ml-agents/blob/master/
 ## Author
 
 Ivan Vigorito
-
-## License
-
-GNU GENERAL PUBLIC LICENSE [Version 3, 29 June 2007]
